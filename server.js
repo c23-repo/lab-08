@@ -18,7 +18,7 @@ const app = express();
 const PORT = process.env.PORT || 3000;
 
 app.use(cors());
-
+app.use(express.static('./city-explorer-front-end'));
 // Database Setup
 const client = new pg.Client(process.env.DATABASE_URL);
 client.connect();
